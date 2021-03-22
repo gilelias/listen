@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/wavesurfer.js"></script>
+    <script src="/js/app.js"></script>
+
+    <title>Listen UI</title>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <select ng-model="selected_folder" ng-options="item for item in folders"></select>
+        <select ng-model="selected_file" ng-options="item for item in files[selected_folder]"></select>
+        <div id="waveform"></div>
+    </div>
+</body>
+
+</html>
